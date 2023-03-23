@@ -1,4 +1,5 @@
 # Spring-boot-microservices
+Creating a real-time microservices project using Spring Boot, and Spring Cloud technologies.
 
 # Solution Architecture
 
@@ -14,4 +15,4 @@
 - Inventory service: Provides API to check if product is in stock. Order service can communicate with inventory service. 
 - Notification service: Can send email-notification after order is placed
 
-## The services were built with springboot initilizr framework [here](start.spring.io). 
+- The services were built with springboot initilizr framework [here](start.spring.io). 
