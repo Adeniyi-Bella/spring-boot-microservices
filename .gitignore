@@ -1,3 +1,6 @@
 .metals
 .vscode
 .idea
+
+product-service/src/main/resources/.env
+product-service/target/classes/.env
