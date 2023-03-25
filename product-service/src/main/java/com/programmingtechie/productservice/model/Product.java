@@ -14,9 +14,9 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @Builder
 @Data
-
 public class Product {
-    @Id //to specify it is a unique identifier
+
+    @Id
     private String id;
     private String name;
     private String description;

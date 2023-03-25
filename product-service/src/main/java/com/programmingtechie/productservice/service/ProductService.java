@@ -11,21 +11,20 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor //Creates constructor at compile time
-@Slf4j //for logging
+@RequiredArgsConstructor
+@Slf4j
 public class ProductService {
 
     private final ProductRepository productRepository;
+
     public void createProduct(ProductRequest productRequest) {
-        //map product request to product by creating instance of Product
-        Product product = Product.builder() //to build the product object
+        Product product = Product.builder()
                 .name(productRequest.getName())
                 .description(productRequest.getDescription())
                 .price(productRequest.getPrice())
                 .build();
-        //save inside DB
+
         productRepository.save(product);
-        //{} is a placeholder for the id
         log.info("Product {} is saved", product.getId());
     }
 
