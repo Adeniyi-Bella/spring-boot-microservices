@@ -16,5 +16,5 @@ Architectural layer below.
 
 ![architecture](https://user-images.githubusercontent.com/37347588/227748019-5f854bc5-8454-412b-bc23-ac3c4512ba58.png)
 
-## Logic Layer
+## Logic Layer for each service
 ![logic layer](https://user-images.githubusercontent.com/37347588/227748037-b6576358-4221-4177-ae0f-23b4e7941270.png)
