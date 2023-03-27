@@ -5,7 +5,9 @@ Architectural layer below.
 
 
 ## Services and their functionality
-- Service discovery was implemented with Eureka server/client. This helps to persist services on the client side acting as a caching solution. 
+- Service discovery was implemented with spring cloud discovery Eureka server/client. This helps to persist services on the client side acting as a caching solution. 
+
+- API gateway was implemented with spring cloud gateway to route and filter incoming requests to micro services.
 
 - Order service: Built on mySQL DB. Makes synchronous call to Inventory service to confirm if goods are available and asynchronous call to notification service notifying customers if order was successful.
 
