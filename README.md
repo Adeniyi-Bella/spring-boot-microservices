@@ -1,14 +1,17 @@
 # spring-boot-microservices
-A real time microservices supply monitoring project using spring boot and spring cloud technologies to create 
-rest API. Services can connect/interact to each other or can also connect with external tools as shown in the 
+A real time microservices supply monitoring project utilizing spring cloud technologies framework. Services can connect/interact to each other or can also connect with external tools as shown in the 
 Architectural layer below. 
 
+
+
 ## Services and their functionality
-- Order service: Built with mySQL DB. Makes synchronous call to Inventory service to confirm if goods are available and asynchronous call to notification service notifying customers if order was successful.
+- Service discovery was implemented with Eureka server/client. This helps to persist services on the client side acting as a caching solution. 
 
-- Product service: Built with mongoDB. An endpoint to display goods. The frontend would be built on this end point. 
+- Order service: Built on mySQL DB. Makes synchronous call to Inventory service to confirm if goods are available and asynchronous call to notification service notifying customers if order was successful.
 
-- Inventory service: Built with mySQL DB. Takes count of the quantity of goods in stock. 
+- Product service: Built on mongoDB. An endpoint to display goods. The frontend would be built on this end point. 
+
+- Inventory service: Built on mySQL DB. Takes count of the quantity of goods in stock. 
 
 - Notification service: Serveless API to notify cutomers about their orders.
 
