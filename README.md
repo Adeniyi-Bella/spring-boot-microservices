@@ -5,6 +5,8 @@ Architectural layer below.
 
 
 ## Services and their functionality
+- Circuit breaker was implemented using Resilience 4j depency from Spring Cloud circuit breaker framework. This helps to degrade functionality when a method call fails. 
+
 - Service discovery was implemented with spring cloud discovery Eureka server/client. This helps to persist services on the client side acting as a caching solution. 
 
 - API gateway was implemented with spring cloud gateway to route and filter incoming requests to micro services.
