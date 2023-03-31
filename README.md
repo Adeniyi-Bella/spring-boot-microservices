@@ -5,7 +5,9 @@ Architectural layer below.
 
 
 ## Services and their functionality
-- Circuit breaker was implemented using Resilience 4j depency from Spring Cloud circuit breaker framework. This helps to degrade functionality when a method call fails. 
+- Distributed Tracing was implemented with [spring-cloud-sleuth](https://spring.io/projects/spring-cloud-sleuth) and [Zipkin](https://zipkin.io/pages/quickstart) for the UI. This helps to add traces and spans id for every call made to all the services. 
+
+- Circuit breaker was implemented using Resilience 4j depency from Spring Cloud circuit breaker framework. This helps to degrade functionality when a method call fails. More information [here](https://spring.io/projects/spring-cloud-circuitbreaker).
 
 - Service discovery was implemented with spring cloud discovery Eureka server/client. This helps to persist services on the client side acting as a caching solution. 
 
