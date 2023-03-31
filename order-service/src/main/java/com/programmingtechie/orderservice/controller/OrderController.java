@@ -21,12 +21,12 @@ public class OrderController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     // name is same as in application properties file
-    @CircuitBreaker(name="inventory", fallbackMethod = "fallbackMethod")
+    /*@CircuitBreaker(name="inventory", fallbackMethod = "fallbackMethod")
     @TimeLimiter(name="inventory")
-    @Retry(name = "inventory")
+    @Retry(name = "inventory")*/
     // completeablefuture as it is an asynchronous call
-    public CompletableFuture<String> placeOrder(@RequestBody OrderRequest orderRequest) {
-        return CompletableFuture.supplyAsync(()->orderService.placeOrder(orderRequest));
+    public String placeOrder(@RequestBody OrderRequest orderRequest) {
+        return orderService.placeOrder(orderRequest);
 
     }
 
