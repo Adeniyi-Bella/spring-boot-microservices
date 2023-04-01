@@ -8,7 +8,7 @@ A real time microservices supply monitoring project utilizing spring cloud techn
 
 - Circuit breaker was implemented using Resilience 4j depency from Spring Cloud circuit breaker framework. This helps to degrade functionality when a method call fails. Since we are implementing a synchronous call to the inventory service, a circuit breaker would ensure clients are routed to a new page when a service fails or takes longer time to respond. More information [here](https://spring.io/projects/spring-cloud-circuitbreaker).
 
-- Service discovery was implemented with spring cloud discovery Eureka server/client. This helps to persist services on the client side acting as a caching solution. 
+- Service discovery was implemented with spring cloud discovery Eureka server/client. This helps to persist services on the eureka client side acting as a caching solution when the server is down. This can be seen as an SSG solution for rendering the browser DOM. 
 
 - API gateway was implemented with spring cloud gateway to route and filter incoming requests to micro services.
 
