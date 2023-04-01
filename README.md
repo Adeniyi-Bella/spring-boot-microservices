@@ -5,9 +5,11 @@ Architectural layer below.
 
 
 ## Services and their functionality
-- Distributed Tracing was implemented with [spring-cloud-sleuth](https://spring.io/projects/spring-cloud-sleuth) and [Zipkin](https://zipkin.io/pages/quickstart) for the UI. This helps to add traces and spans id for every api call made to all the services. 
+- Event driven activity such as notifying customers when order has been made was implemented with kafka. The kafka broker was set up using [Docker](https://developer.confluent.io/quickstart/kafka-docker/?utm_medium=sem&utm_source=google&utm_campaign=ch.sem_br.nonbrand_tp.prs_tgt.dsa_mt.dsa_rgn.emea_lng.eng_dv.all_con.confluent-developer&utm_term=&creative=&device=c&placement=&gclid=Cj0KCQjwiZqhBhCJARIsACHHEH-xX9qtTC87qTy6cshJ2Xg9Q9Is-G7lbOuU7w50jUVTDxAwrVW4VY8aAmXLEALw_wcB) and [Spring for Apache kafka](https://spring.io/projects/spring-kafka).
 
-- Circuit breaker was implemented using Resilience 4j depency from Spring Cloud circuit breaker framework. This helps to degrade functionality when a method call fails. More information [here](https://spring.io/projects/spring-cloud-circuitbreaker).
+- Distributed Tracing was implemented with [spring-cloud-sleuth](https://spring.io/projects/spring-cloud-sleuth) and [Zipkin](https://zipkin.io/pages/quickstart) for the UI. This helps to track the performance of our app by adding traces and spans id for every api call made to all the services. 
+
+- Circuit breaker was implemented using Resilience 4j depency from Spring Cloud circuit breaker framework. This helps to degrade functionality when a method call fails. Since we are implementing a synchronous call to the inventory service, a circuit breaker would ensure clients are routed to a new page when a service fails or takes longer time to respond. More information [here](https://spring.io/projects/spring-cloud-circuitbreaker).
 
 - Service discovery was implemented with spring cloud discovery Eureka server/client. This helps to persist services on the client side acting as a caching solution. 
 
