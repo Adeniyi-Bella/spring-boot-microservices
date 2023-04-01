@@ -1,8 +1,5 @@
 # spring-boot-microservices
-A real time microservices supply monitoring project utilizing spring cloud technologies framework. Services can connect/interact to each other or can also connect with external tools as shown in the 
-Architectural layer below. 
-
-
+A real time microservices supply monitoring project utilizing spring cloud technologies framework. Services can connect/interact with each other or can also connect with external tools as shown in the Architectural layer below. 
 
 ## Services and their functionality
 - Event driven activity such as notifying customers when order has been made was implemented with kafka. The kafka broker was set up using [Docker](https://developer.confluent.io/quickstart/kafka-docker/?utm_medium=sem&utm_source=google&utm_campaign=ch.sem_br.nonbrand_tp.prs_tgt.dsa_mt.dsa_rgn.emea_lng.eng_dv.all_con.confluent-developer&utm_term=&creative=&device=c&placement=&gclid=Cj0KCQjwiZqhBhCJARIsACHHEH-xX9qtTC87qTy6cshJ2Xg9Q9Is-G7lbOuU7w50jUVTDxAwrVW4VY8aAmXLEALw_wcB) and [Spring for Apache kafka](https://spring.io/projects/spring-kafka).
